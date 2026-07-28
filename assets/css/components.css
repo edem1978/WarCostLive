@@ -1,0 +1,151 @@
+/* ==========================
+   BUTTON
+========================== */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 32px;
+
+    background: var(--color-primary);
+    color: var(--color-text);
+
+    border: none;
+    border-radius: var(--radius-medium);
+
+    cursor: pointer;
+
+    font-weight: var(--font-weight-bold);
+
+    transition: all var(--transition-fast);
+}
+
+.button:hover {
+    background: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card {
+
+    background: var(--color-card);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-large);
+
+    padding: var(--space-32);
+
+    box-shadow: var(--shadow-card);
+
+}
+
+/* ==========================
+   BADGE
+========================== */
+
+.badge {
+
+    display: inline-block;
+
+    padding: 6px 14px;
+
+    border-radius: 999px;
+
+    background: rgba(56, 189, 248, .12);
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-small);
+
+    font-weight: var(--font-weight-medium);
+
+}
+
+/* ==========================
+   LIVE DOT
+========================== */
+
+.live-dot {
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: var(--color-success);
+
+    display: inline-block;
+
+    margin-right: 8px;
+
+}
+
+/* ==========================
+   HERO COMPONENTS
+========================== */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 16px;
+
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    max-width: 900px;
+    margin: 0 auto 32px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 24px;
+}
+
+#moneyCounter {
+
+    letter-spacing: -2px;
+
+    text-shadow: 0 0 30px rgba(34,197,94,.25);
+
+}
+
+.button {
+
+    margin-top: 20px;
+
+}
+
+/* ==========================
+   COUNTER
+========================== */
+
+.counter-rate {
+
+    margin-top: -10px;
+    margin-bottom: 10px;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    color: var(--color-warning);
+
+}
+
+.counter-note {
+
+    color: var(--color-muted);
+
+    font-size: 16px;
+
+    margin-bottom: 32px;
+
+}

@@ -1,0 +1,74 @@
+:root {
+
+    /* ==========================
+       COLORS
+    ========================== */
+
+    --color-background: #0B1220;
+    --color-surface: #111827;
+    --color-card: #1F2937;
+
+    --color-primary: #38BDF8;
+    --color-secondary: #0EA5E9;
+
+    --color-success: #22C55E;
+    --color-warning: #F59E0B;
+    --color-danger: #EF4444;
+
+    --color-text: #F9FAFB;
+    --color-text-muted: #94A3B8;
+
+    --color-border: #334155;
+
+    /* ==========================
+       TYPOGRAPHY
+    ========================== */
+
+    --font-family: "Inter", Arial, sans-serif;
+
+    --font-size-h1: 72px;
+    --font-size-h2: 42px;
+    --font-size-h3: 28px;
+
+    --font-size-body: 18px;
+    --font-size-small: 14px;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* ==========================
+       SPACING
+    ========================== */
+
+    --space-8: 8px;
+    --space-16: 16px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --space-48: 48px;
+    --space-64: 64px;
+    --space-96: 96px;
+    --space-128: 128px;
+
+    /* ==========================
+       BORDER RADIUS
+    ========================== */
+
+    --radius-small: 8px;
+    --radius-medium: 14px;
+    --radius-large: 24px;
+
+    /* ==========================
+       SHADOWS
+    ========================== */
+
+    --shadow-card: 0 10px 30px rgba(0,0,0,.25);
+
+    /* ==========================
+       ANIMATIONS
+    ========================== */
+
+    --transition-fast: .2s ease;
+    --transition-normal: .35s ease;
+
+}

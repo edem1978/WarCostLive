@@ -1,0 +1,37 @@
+{
+  "lastUpdated": "2026-07-28T07:30:00Z",
+
+  "warStart": "2022-02-24T00:00:00Z",
+
+  "militarySpending": {
+    "value": 514234876540,
+    "perSecond": 10.65,
+    "currency": "USD",
+    "status": "Updated Live",
+    "source": "WarCost.Live Estimate"
+  },
+
+  "personnelLosses": {
+    "value": "1,050,000+",
+    "status": "Estimated",
+    "source": "General Staff of Ukraine"
+  },
+
+  "tankLosses": {
+    "value": "11,000+",
+    "status": "Confirmed",
+    "source": "General Staff of Ukraine"
+  },
+
+  "aircraftLosses": {
+    "value": "421",
+    "status": "Confirmed",
+    "source": "General Staff of Ukraine"
+  },
+
+  "missileLosses": {
+    "value": "30,000+",
+    "status": "Estimated",
+    "source": "WarCost.Live Estimate"
+  }
+}

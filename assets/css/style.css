@@ -1,111 +1,798 @@
-* {
+/* ==========================================================
+   WARCOST.LIVE v0.2
+   BLOCK 1
+   Variables • Reset • Base • Layout
+========================================================== */
+
+/* ==========================
+   VARIABLES
+========================== */
+
+:root {
+
+    --bg: #0B1220;
+    --surface: #111827;
+    --surface-light: #1F2937;
+
+    --text: #F9FAFB;
+    --muted: #9CA3AF;
+
+    --primary: #3B82F6;
+    --success: #22C55E;
+    --warning: #FACC15;
+
+    --border: rgba(255,255,255,.08);
+
+    --radius: 18px;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.30);
+
+    --transition: .25s ease;
+
+}
+
+/* ==========================
+   RESET
+========================== */
+
+*,
+*::before,
+*::after {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
 }
 
 body {
-    background: #0f172a;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
+
+    font-family: "Inter", sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
     line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+
 }
+
+img {
+
+    display: block;
+    max-width: 100%;
+
+}
+
+a {
+
+    color: inherit;
+    text-decoration: none;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+button {
+
+    font: inherit;
+
+}
+
+/* ==========================
+   LAYOUT
+========================== */
 
 .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
+
+    width: min(1240px, 92%);
+    margin: 0 auto;
+
 }
 
-.hero {
-    padding: 70px 20px 40px;
+main {
+
+    overflow: hidden;
+
+}
+
+section {
+
+    padding: 100px 0;
+
+}
+
+/* ==========================
+   TYPOGRAPHY
+========================== */
+
+h1 {
+
+    font-size: clamp(48px,7vw,72px);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    margin-bottom: 24px;
+
+}
+
+h2 {
+
+    font-size: 42px;
+
+    font-weight: 700;
+
     text-align: center;
+
+    margin-bottom: 60px;
+
+}
+
+p {
+
+    color: var(--muted);
+
+}
+
+.section-title {
+
+    text-align: center;
+
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.grid {
+
+    display: grid;
+
+    gap: 24px;
+
+}
+
+.grid-3 {
+
+    grid-template-columns: repeat(3,1fr);
+
+}
+
+/* ==========================================================
+   WARCOST.LIVE v0.2
+   BLOCK 2
+   Header • Hero
+========================================================== */
+
+/* ==========================
+   HEADER
+========================== */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(11,18,32,.85);
+
+    backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.header-container {
+
+    height: 88px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.logo {
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: var(--text);
+
+}
+
+nav ul {
+
+    display: flex;
+
+    gap: 36px;
+
+}
+
+nav a {
+
+    color: var(--muted);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+nav a:hover {
+
+    color: var(--text);
+
+}
+
+/* ==========================================================
+   HERO PREMIUM
+========================================================== */
+
+.hero {
+
+    min-height: calc(100vh - 88px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(34,197,94,.10) 0%,
+            rgba(34,197,94,.04) 35%,
+            transparent 70%);
+
+}
+
+.hero-content {
+
+    max-width: 980px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 20px;
+
+    margin-bottom: 32px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    background: rgba(255,255,255,.04);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: .08em;
+
+}
+
+.live-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: var(--success);
+
+    box-shadow:
+        0 0 10px var(--success),
+        0 0 20px var(--success);
+
+    animation: pulse 1.8s infinite;
+
 }
 
 .hero h1 {
-    font-size: 54px;
-    color: #38bdf8;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
+
+    margin-bottom: 28px;
+
 }
 
-.subtitle {
-    font-size: 24px;
-    color: #cbd5e1;
-}
+.hero-subtitle {
 
-.counter,
-.days,
-.coming {
-    margin: 30px auto;
-    padding: 35px;
-    background: #1e293b;
-    border-radius: 15px;
-    text-align: center;
-}
+    max-width: 760px;
 
-.counter h2,
-.days h2,
-.coming h2 {
-    color: #94a3b8;
-    margin-bottom: 20px;
-}
+    margin: 0 auto 48px;
 
-.money {
-    font-size: 52px;
-    font-weight: bold;
-    color: #22c55e;
-    margin-bottom: 15px;
-}
-
-.per-second {
-    color: #fbbf24;
     font-size: 22px;
+
+    line-height: 1.7;
+
 }
 
-.days-number {
-    font-size: 44px;
-    color: #38bdf8;
-    font-weight: bold;
+.hero-counter {
+
+    font-size: clamp(60px,8vw,96px);
+
+    font-weight: 800;
+
+    color: var(--success);
+
+    letter-spacing: -3px;
+
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 0 20px rgba(34,197,94,.35),
+        0 0 45px rgba(34,197,94,.20);
+
 }
 
-.coming ul {
-    list-style: none;
+.counter-rate {
+
+    color: var(--warning);
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
 }
 
-.coming li {
-    padding: 10px;
-    font-size: 20px;
-    border-bottom: 1px solid #334155;
+.counter-note {
+
+    margin-bottom: 48px;
+
+    font-size: 17px;
+
 }
 
-.coming li:last-child {
-    border-bottom: none;
+.button {
+
+    display: inline-block;
+
+    padding: 18px 42px;
+
+    border-radius: 14px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+
 }
+
+.button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 34px rgba(59,130,246,.35);
+
+}
+
+/* ==========================================================
+   WARCOST.LIVE v0.2
+   BLOCK 3
+   Statistics • Cards
+========================================================== */
+
+/* ==========================
+   STATISTICS
+========================== */
+
+#statistics {
+
+    padding: 100px 0;
+
+}
+
+/* ==========================
+   CARDS GRID
+========================== */
+
+.grid-3 {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 32px;
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow);
+
+}
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: rgba(59,130,246,.35);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.35);
+
+}
+
+.card-label {
+
+    font-size: 15px;
+
+    color: var(--muted);
+
+    margin-bottom: 16px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .08em;
+
+}
+
+.card-value {
+
+    font-size: 36px;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+    margin-bottom: 18px;
+
+    line-height: 1.1;
+
+}
+
+.card-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 14px;
+
+    color: var(--muted);
+
+}
+
+.card-status.live {
+
+    color: var(--success);
+
+    font-weight: 600;
+
+}
+
+/* ==========================
+   SPECIAL VALUES
+========================== */
+
+#militarySpending {
+
+    color: var(--success);
+
+}
+
+#warTimer {
+
+    color: var(--warning);
+
+}
+
+#personnelLosses,
+#tankLosses,
+#aircraftLosses,
+#missileLosses {
+
+    color: var(--text);
+
+}
+
+/* ==========================================================
+   WARCOST.LIVE v0.2
+   BLOCK 4
+   Footer • Animations • Responsive
+========================================================== */
+
+/* ==========================
+   FOOTER
+========================== */
 
 footer {
-    margin-top: 50px;
-    padding: 30px;
+
+    margin-top: 80px;
+
+    padding: 40px 0;
+
+    border-top: 1px solid var(--border);
+
     text-align: center;
-    color: #94a3b8;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+@keyframes pulse {
+
+    0% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        transform: scale(1.3);
+
+        opacity: .6;
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+.live-dot {
+
+    animation: pulse 1.8s infinite;
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.hero-content,
+.card {
+
+    animation: fadeIn .6s ease;
+
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: var(--bg);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--surface-light);
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--primary);
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 1100px) {
+
+    .grid-3 {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
 }
 
 @media (max-width: 768px) {
 
-    .hero h1 {
-        font-size: 36px;
+    header {
+
+        position: relative;
+
     }
 
-    .money {
-        font-size: 32px;
+    .header-container {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 18px;
+
+        height: auto;
+
+        padding: 24px 0;
+
     }
 
-    .days-number {
-        font-size: 28px;
+    nav ul {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 18px;
+
     }
 
-    .subtitle {
+    section {
+
+        padding: 70px 0;
+
+    }
+
+    .hero {
+
+        padding-top: 80px;
+
+    }
+
+    h1 {
+
+        font-size: 42px;
+
+    }
+
+    .hero-counter {
+
+        font-size: 44px;
+
+    }
+
+    .hero-subtitle {
+
         font-size: 18px;
+
+    }
+
+    .grid-3 {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .card {
+
+        padding: 26px;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .container {
+
+        width: 94%;
+
+    }
+
+    h1 {
+
+        font-size: 34px;
+
+    }
+
+    h2 {
+
+        font-size: 30px;
+
+    }
+
+    .hero-counter {
+
+        font-size: 34px;
+
+    }
+
+    .button {
+
+        width: 100%;
+
+        text-align: center;
+
     }
 
 }

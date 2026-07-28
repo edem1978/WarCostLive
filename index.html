@@ -1,106 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WarCost.Live | Russia War Dashboard</title>
+    <title>WarCost.Live | Tracking the Cost of War. In Real Time.</title>
 
-    <meta name="description" content="Live dashboard tracking the estimated economic cost and military impact of Russia's war against Ukraine.">
+    <meta name="description"
+        content="Live dashboard tracking the estimated economic cost and military impact of Russia's war against Ukraine.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
+
 <body>
 
-<header class="hero">
+    <!-- HEADER -->
 
-    <div class="container">
+    <header>
 
-        <h1>WARCOST.LIVE</h1>
+        <div class="container header-container">
 
-        <p class="subtitle">
-            Russia War Dashboard
-        </p>
+            <a href="#" class="logo">
 
-    </div>
+                WARCOST.LIVE
 
-</header>
+            </a>
 
-<main>
+            <nav>
 
-<section class="counter">
+                <ul>
 
-    <div class="container">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Statistics</a></li>
+                    <li><a href="#">Methodology</a></li>
+                    <li><a href="#">About</a></li>
 
-        <h2>Estimated Military Spending</h2>
+                </ul>
 
-        <div id="moneyCounter" class="money">
-
-            $514,234,653,345
-
-        </div>
-
-        <div class="per-second">
-
-            + $10.65 / second
+            </nav>
 
         </div>
 
-    </div>
+    </header>
 
-</section>
+    <main>
 
-<section class="days">
+        <!-- HERO -->
 
-    <div class="container">
+        <section class="hero">
 
-        <h2>War Duration</h2>
+            <div class="container hero-content">
 
-        <div id="daysCounter" class="days-number">
+                <div class="badge">
 
-            1615 Days
+                    <span class="live-dot"></span>
+
+                    LIVE DASHBOARD
+
+                </div>
+
+                <h1>
+
+                    Tracking the Cost of War.<br>
+                    In Real Time.
+
+                </h1>
+
+                <p class="hero-subtitle">
+
+                    Estimated Economic Impact of Russia's War Against Ukraine
+
+                </p>
+
+                <div id="moneyCounter" class="hero-counter">
+
+                    $514,234,876,540
+
+                </div>
+
+                <p class="counter-rate">
+
+                    + $10.65 / second
+
+                </p>
+
+                <p class="counter-note">
+
+                    Updated every second
+
+                </p>
+
+                <a href="#statistics" class="button">
+
+                    Explore Statistics
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- STATISTICS -->
+
+        <section id="statistics">
+
+            <div class="container">
+
+                <h2 class="section-title">
+
+                    Key Metrics
+
+                </h2>
+
+                <div class="grid grid-3">
+
+                    <article class="card">
+
+                        <div class="card-label">
+
+                            Military Spending
+
+                        </div>
+
+                        <div class="card-value" id="militarySpending">
+    Loading...
+</div>
+
+                        <div class="card-status live">
+
+                            ● Updated Live
+
+                        </div>
+
+                    </article>
+
+                    <article class="card">
+
+                        <div class="card-label">
+
+                            Personnel Losses
+
+                        </div>
+
+                        <div class="card-value" id="personnelLosses">
+    Loading...
+</div>
+
+                        <div class="card-status">
+
+                            Estimated
+
+                        </div>
+
+                    </article>
+
+                    <article class="card">
+
+                        <div class="card-label">
+
+                            Tanks
+
+                        </div>
+
+                        <div class="card-value" id="tankLosses">
+    Loading...
+</div>
+
+                        <div class="card-status">
+
+                            Confirmed
+
+                        </div>
+
+                    </article>
+
+                    <article class="card">
+
+                        <div class="card-label">
+
+                            Aircraft
+
+                        </div>
+
+                        <div class="card-value" id="aircraftLosses">
+    Loading...
+</div>
+
+                        <div class="card-status">
+
+                            Confirmed
+
+                        </div>
+
+                    </article>
+
+                    <article class="card">
+
+                        <div class="card-label">
+
+                            Missiles
+
+                        </div>
+
+                        <div class="card-value" id="missileLosses">
+    Loading...
+</div>
+
+                        <div class="card-status">
+
+                            Estimated
+
+                        </div>
+
+                    </article>
+
+                    <article class="card">
+
+                        <div class="card-label">
+
+                            War Duration
+
+                        </div>
+
+                        <div class="card-value" id="warTimer">
+
+                            Loading...
+
+                        </div>
+
+                        <div class="card-status live">
+
+                            ● Updated Daily
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+
+                © 2026 WarCost.Live
+
+            </p>
 
         </div>
 
-    </div>
+    </footer>
 
-</section>
-
-<section class="coming">
-
-    <div class="container">
-
-        <h2>Coming Soon</h2>
-
-        <ul>
-
-            <li>Personnel Losses</li>
-            <li>Equipment Losses</li>
-            <li>Economic Impact</li>
-            <li>Interactive Charts</li>
-            <li>Daily Statistics</li>
-
-        </ul>
-
-    </div>
-
-</section>
-
-</main>
-
-<footer>
-
-    <div class="container">
-
-        <p>
-            © 2026 WarCost.Live
-        </p>
-
-    </div>
-
-</footer>
-
-<script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js"></script>
 
 </body>
+
 </html>
